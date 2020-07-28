@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 using System.ServiceModel;
 using System.ServiceModel.Description;
 
-namespace ServiceConsole
+namespace CurrencyConversion.Service
 {
-    class Server
+    public class Server
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             Uri BaseAddress = new Uri("http://localhost:8000/ServiceConsole/Service");
 
