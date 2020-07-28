@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d86be005-b85b-482f-bcc7-71ce0caf45ad" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8000/ServiceConsole/Service" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CalculatorService.wsdl" MetadataType="Wsdl" ID="19805ff4-1c3a-4133-a80e-e70fdff150fb" SourceId="1" SourceUrl="http://localhost:8000/ServiceConsole/Service?wsdl" />
+    <MetadataFile FileName="Service.wsdl" MetadataType="Wsdl" ID="6318917f-5163-45ea-bb9f-e75d49eb9497" SourceId="1" SourceUrl="http://localhost:8000/ServiceConsole/Service?wsdl=wsdl0" />
+    <MetadataFile FileName="Service.xsd" MetadataType="Schema" ID="356113a7-5d94-460f-b16d-7d25ad9920cc" SourceId="1" SourceUrl="http://localhost:8000/ServiceConsole/Service?xsd=xsd0" />
+    <MetadataFile FileName="Service1.xsd" MetadataType="Schema" ID="ee7f254a-6d6b-46be-9d1e-6b7c74783b3e" SourceId="1" SourceUrl="http://localhost:8000/ServiceConsole/Service?xsd=xsd1" />
+    <MetadataFile FileName="Service.disco" MetadataType="Disco" ID="7f003bce-265e-4f0e-83a7-8576c8591929" SourceId="1" SourceUrl="http://localhost:8000/ServiceConsole/Service?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
