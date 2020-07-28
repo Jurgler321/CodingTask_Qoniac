@@ -12,91 +12,49 @@ namespace CurrencyConversion_Client.ServiceReference1 {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="ServiceConsole", ConfigurationName="ServiceReference1.ICalculator")]
-    public interface ICalculator {
+    [System.ServiceModel.ServiceContractAttribute(Namespace="CurrencyConversion.Service", ConfigurationName="ServiceReference1.ICurrencyConversionService")]
+    public interface ICurrencyConversionService {
         
-        [System.ServiceModel.OperationContractAttribute(Action="ServiceConsole/ICalculator/Add", ReplyAction="ServiceConsole/ICalculator/AddResponse")]
-        double Add(double n1, double n2);
+        [System.ServiceModel.OperationContractAttribute(Action="CurrencyConversion.Service/ICurrencyConversionService/Convert", ReplyAction="CurrencyConversion.Service/ICurrencyConversionService/ConvertResponse")]
+        string Convert(string input);
         
-        [System.ServiceModel.OperationContractAttribute(Action="ServiceConsole/ICalculator/Add", ReplyAction="ServiceConsole/ICalculator/AddResponse")]
-        System.Threading.Tasks.Task<double> AddAsync(double n1, double n2);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="ServiceConsole/ICalculator/Subtract", ReplyAction="ServiceConsole/ICalculator/SubtractResponse")]
-        double Subtract(double n1, double n2);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="ServiceConsole/ICalculator/Subtract", ReplyAction="ServiceConsole/ICalculator/SubtractResponse")]
-        System.Threading.Tasks.Task<double> SubtractAsync(double n1, double n2);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="ServiceConsole/ICalculator/Multiply", ReplyAction="ServiceConsole/ICalculator/MultiplyResponse")]
-        double Multiply(double n1, double n2);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="ServiceConsole/ICalculator/Multiply", ReplyAction="ServiceConsole/ICalculator/MultiplyResponse")]
-        System.Threading.Tasks.Task<double> MultiplyAsync(double n1, double n2);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="ServiceConsole/ICalculator/Divide", ReplyAction="ServiceConsole/ICalculator/DivideResponse")]
-        double Divide(double n1, double n2);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="ServiceConsole/ICalculator/Divide", ReplyAction="ServiceConsole/ICalculator/DivideResponse")]
-        System.Threading.Tasks.Task<double> DivideAsync(double n1, double n2);
+        [System.ServiceModel.OperationContractAttribute(Action="CurrencyConversion.Service/ICurrencyConversionService/Convert", ReplyAction="CurrencyConversion.Service/ICurrencyConversionService/ConvertResponse")]
+        System.Threading.Tasks.Task<string> ConvertAsync(string input);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface ICalculatorChannel : CurrencyConversion_Client.ServiceReference1.ICalculator, System.ServiceModel.IClientChannel {
+    public interface ICurrencyConversionServiceChannel : CurrencyConversion_Client.ServiceReference1.ICurrencyConversionService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class CalculatorClient : System.ServiceModel.ClientBase<CurrencyConversion_Client.ServiceReference1.ICalculator>, CurrencyConversion_Client.ServiceReference1.ICalculator {
+    public partial class CurrencyConversionServiceClient : System.ServiceModel.ClientBase<CurrencyConversion_Client.ServiceReference1.ICurrencyConversionService>, CurrencyConversion_Client.ServiceReference1.ICurrencyConversionService {
         
-        public CalculatorClient() {
+        public CurrencyConversionServiceClient() {
         }
         
-        public CalculatorClient(string endpointConfigurationName) : 
+        public CurrencyConversionServiceClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName) {
         }
         
-        public CalculatorClient(string endpointConfigurationName, string remoteAddress) : 
+        public CurrencyConversionServiceClient(string endpointConfigurationName, string remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public CalculatorClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public CurrencyConversionServiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public CalculatorClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public CurrencyConversionServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
         }
         
-        public double Add(double n1, double n2) {
-            return base.Channel.Add(n1, n2);
+        public string Convert(string input) {
+            return base.Channel.Convert(input);
         }
         
-        public System.Threading.Tasks.Task<double> AddAsync(double n1, double n2) {
-            return base.Channel.AddAsync(n1, n2);
-        }
-        
-        public double Subtract(double n1, double n2) {
-            return base.Channel.Subtract(n1, n2);
-        }
-        
-        public System.Threading.Tasks.Task<double> SubtractAsync(double n1, double n2) {
-            return base.Channel.SubtractAsync(n1, n2);
-        }
-        
-        public double Multiply(double n1, double n2) {
-            return base.Channel.Multiply(n1, n2);
-        }
-        
-        public System.Threading.Tasks.Task<double> MultiplyAsync(double n1, double n2) {
-            return base.Channel.MultiplyAsync(n1, n2);
-        }
-        
-        public double Divide(double n1, double n2) {
-            return base.Channel.Divide(n1, n2);
-        }
-        
-        public System.Threading.Tasks.Task<double> DivideAsync(double n1, double n2) {
-            return base.Channel.DivideAsync(n1, n2);
+        public System.Threading.Tasks.Task<string> ConvertAsync(string input) {
+            return base.Channel.ConvertAsync(input);
         }
     }
 }

@@ -23,70 +23,20 @@ namespace CurrencyConversion_Client
     /// </summary>
     public partial class MainWindow : Window
     {
-        ServiceHost selfHost;
         public MainWindow()
         {
             InitializeComponent();
-            //Closed += MainWindow_Closed;
-
-
-            //Uri baseAddress = new Uri("http://localhost:52944");
-            //selfHost = new ServiceHost(typeof(CurrencyConversion_Service.Service1), baseAddress);
-
-            //try
-            //{
-            //    // Step 5: Start the service.
-            //    selfHost.Open();
-            //    Console.WriteLine("The service is ready.");
-            //}
-            //catch (CommunicationException ce)
-            //{
-            //    Console.WriteLine("An exception occurred: {0}", ce.Message);
-            //    selfHost.Abort();
-            //}
+            System.Diagnostics.Process.Start("ServiceConsole.exe");
         }
 
-        private void MainWindow_Closed(object sender, EventArgs e)
-        {
-            // Close the ServiceHost to stop the service.
-            Console.WriteLine("Press <Enter> to terminate the service.");
-            Console.WriteLine();
-            Console.ReadLine();
-            selfHost.Close();
-        }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             // Step 1: Create an endpoint address and an instance of the WCF client
-            CalculatorClient client = new CalculatorClient();
+            CurrencyConversionServiceClient client = new CurrencyConversionServiceClient();
 
-            // Step 2: Call the service operations.
-            // Call Add
-            double value1 = 100.00D;
-            double value2 = 15.99D;
-            double result = client.Add(value1, value2);
-            MessageBox.Show(string.Format("Add({0},{1}) = {2}", value1, value2, result));
-
-            // Call Subtract
-            value1 = 145.00D;
-            value2 = 76.54D;
-            result = client.Subtract(value1, value2);
-            MessageBox.Show(string.Format("Subtract({0},{1}) = {2}", value1, value2, result));
-
-            // Call Multiply
-            value1 = 9.00D;
-            value2 = 81.25D;
-            result = client.Multiply(value1, value2);
-            MessageBox.Show(string.Format("Multiply({0},{1}) = {2}", value1, value2, result));
-
-            // Call Divide
-            value1 = 22.00D;
-            value2 = 7.00D;
-            result = client.Divide(value1, value2);
-            MessageBox.Show(string.Format("Divide({0},{1}) = {2}", value1, value2, result));
-
-            // Step 3: Close the client gracefully.
-            // This closes the connection and cleans up resources.
+            string result = client.Convert("test");
+            MessageBox.Show(result);
             client.Close();
 
             Console.WriteLine();

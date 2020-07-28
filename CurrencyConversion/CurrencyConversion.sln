@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29709.97
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyConversion_Client", "CurrencyConversion_Client\CurrencyConversion_Client.csproj", "{58D3D2B4-22D0-43BC-8519-9FAA80F4278D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyConversion.Client", "CurrencyConversion_Client\CurrencyConversion.Client.csproj", "{58D3D2B4-22D0-43BC-8519-9FAA80F4278D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceConsole", "ServiceConsole\ServiceConsole.csproj", "{CDCC8DB5-6779-4E3E-A2F5-B19A019C5563}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyConversion.Service", "ServiceConsole\CurrencyConversion.Service.csproj", "{CDCC8DB5-6779-4E3E-A2F5-B19A019C5563}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
