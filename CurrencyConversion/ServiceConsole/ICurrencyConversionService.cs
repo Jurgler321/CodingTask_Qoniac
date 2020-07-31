@@ -11,6 +11,6 @@ namespace CurrencyConversion.Service
     public interface ICurrencyConversionService
     {
         [OperationContract]
-        string Convert(string input);
+        string Convert(decimal input);
     }
 }

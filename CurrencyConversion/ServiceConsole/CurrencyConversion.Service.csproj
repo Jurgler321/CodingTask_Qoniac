@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{CDCC8DB5-6779-4E3E-A2F5-B19A019C5563}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ServiceConsole</RootNamespace>
-    <AssemblyName>ServiceConsole</AssemblyName>
+    <RootNamespace>CurrencyConversion.Service</RootNamespace>
+    <AssemblyName>CurrencyConversion.Service</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CurrencyConversion.cs" />
     <Compile Include="CurrencyConversionService.cs" />
     <Compile Include="ICurrencyConversionService.cs" />
     <Compile Include="Program.cs" />

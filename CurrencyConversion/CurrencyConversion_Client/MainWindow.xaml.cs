@@ -26,7 +26,6 @@ namespace CurrencyConversion_Client
         public MainWindow()
         {
             InitializeComponent();
-            System.Diagnostics.Process.Start("ServiceConsole.exe");
         }
 
 
@@ -34,14 +33,12 @@ namespace CurrencyConversion_Client
         {
             // Step 1: Create an endpoint address and an instance of the WCF client
             CurrencyConversionServiceClient client = new CurrencyConversionServiceClient();
-
-            string result = client.Convert("test");
-            MessageBox.Show(result);
-            client.Close();
-
-            Console.WriteLine();
-            Console.WriteLine("Press <ENTER> to terminate client.");
-            Console.ReadLine();
+            if(double.TryParse(TB_Input.Text, out double value))
+            {
+                string result = client.Convert(value);
+                MessageBox.Show(result);
+                client.Close();
+            }
         }
     }
 }

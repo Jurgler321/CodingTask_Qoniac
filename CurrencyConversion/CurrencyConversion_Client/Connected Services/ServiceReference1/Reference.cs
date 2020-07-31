@@ -16,10 +16,10 @@ namespace CurrencyConversion_Client.ServiceReference1 {
     public interface ICurrencyConversionService {
         
         [System.ServiceModel.OperationContractAttribute(Action="CurrencyConversion.Service/ICurrencyConversionService/Convert", ReplyAction="CurrencyConversion.Service/ICurrencyConversionService/ConvertResponse")]
-        string Convert(string input);
+        string Convert(double input);
         
         [System.ServiceModel.OperationContractAttribute(Action="CurrencyConversion.Service/ICurrencyConversionService/Convert", ReplyAction="CurrencyConversion.Service/ICurrencyConversionService/ConvertResponse")]
-        System.Threading.Tasks.Task<string> ConvertAsync(string input);
+        System.Threading.Tasks.Task<string> ConvertAsync(double input);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -49,11 +49,11 @@ namespace CurrencyConversion_Client.ServiceReference1 {
                 base(binding, remoteAddress) {
         }
         
-        public string Convert(string input) {
+        public string Convert(double input) {
             return base.Channel.Convert(input);
         }
         
-        public System.Threading.Tasks.Task<string> ConvertAsync(string input) {
+        public System.Threading.Tasks.Task<string> ConvertAsync(double input) {
             return base.Channel.ConvertAsync(input);
         }
     }

@@ -9,9 +9,10 @@ namespace CurrencyConversion.Service
 {
     public class CurrencyConversionService : ICurrencyConversionService
     {
-        public string Convert(string input)
+        CurrencyConversion conversion = new CurrencyConversion();
+        public string Convert(decimal input)
         {
-            return input + input;
+            return conversion.Convert(input);
         }
     }
 }
