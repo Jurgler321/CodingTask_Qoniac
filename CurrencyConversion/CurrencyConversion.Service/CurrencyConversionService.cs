@@ -12,7 +12,14 @@ namespace CurrencyConversion.Service
         CurrencyConversion conversion = new CurrencyConversion();
         public string Convert(decimal input)
         {
-            return conversion.Convert(input);
+            try
+            {
+                return conversion.Convert(input);
+            }
+            catch(Exception ex)
+            {
+                return ex.Message;
+            }
         }
     }
 }

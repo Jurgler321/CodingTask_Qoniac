@@ -8,27 +8,27 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CurrencyConversion_Client.ServiceReference1 {
+namespace CurrencyConversion_Client.ServiceReference {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="CurrencyConversion.Service", ConfigurationName="ServiceReference1.ICurrencyConversionService")]
+    [System.ServiceModel.ServiceContractAttribute(Namespace="CurrencyConversion.Service", ConfigurationName="ServiceReference.ICurrencyConversionService")]
     public interface ICurrencyConversionService {
         
         [System.ServiceModel.OperationContractAttribute(Action="CurrencyConversion.Service/ICurrencyConversionService/Convert", ReplyAction="CurrencyConversion.Service/ICurrencyConversionService/ConvertResponse")]
-        string Convert(double input);
+        string Convert(decimal input);
         
         [System.ServiceModel.OperationContractAttribute(Action="CurrencyConversion.Service/ICurrencyConversionService/Convert", ReplyAction="CurrencyConversion.Service/ICurrencyConversionService/ConvertResponse")]
-        System.Threading.Tasks.Task<string> ConvertAsync(double input);
+        System.Threading.Tasks.Task<string> ConvertAsync(decimal input);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface ICurrencyConversionServiceChannel : CurrencyConversion_Client.ServiceReference1.ICurrencyConversionService, System.ServiceModel.IClientChannel {
+    public interface ICurrencyConversionServiceChannel : CurrencyConversion_Client.ServiceReference.ICurrencyConversionService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class CurrencyConversionServiceClient : System.ServiceModel.ClientBase<CurrencyConversion_Client.ServiceReference1.ICurrencyConversionService>, CurrencyConversion_Client.ServiceReference1.ICurrencyConversionService {
+    public partial class CurrencyConversionServiceClient : System.ServiceModel.ClientBase<CurrencyConversion_Client.ServiceReference.ICurrencyConversionService>, CurrencyConversion_Client.ServiceReference.ICurrencyConversionService {
         
         public CurrencyConversionServiceClient() {
         }
@@ -49,11 +49,11 @@ namespace CurrencyConversion_Client.ServiceReference1 {
                 base(binding, remoteAddress) {
         }
         
-        public string Convert(double input) {
+        public string Convert(decimal input) {
             return base.Channel.Convert(input);
         }
         
-        public System.Threading.Tasks.Task<string> ConvertAsync(double input) {
+        public System.Threading.Tasks.Task<string> ConvertAsync(decimal input) {
             return base.Channel.ConvertAsync(input);
         }
     }

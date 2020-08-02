@@ -77,7 +77,6 @@ namespace CurrencyConversion.Service
         {
             int cents = GetCents(input);
             long dollars = (long)input;
-            Console.WriteLine("Cents: " + cents);
             List<TripletBlock> hundredblocks = new List<TripletBlock>();
             int blockindex = 1;
             while (TrySplitAtPowerOf10(dollars, 3, out long left, out int right))
@@ -185,7 +184,7 @@ namespace CurrencyConversion.Service
                     right = block;
 
 
-                if (right == 0 && left > 0 && left < 10)
+                if (right == 0 && block > 0 && block < 10)
                     tensResult += singleDigitNames[block];
                 else if (TrySplitAtPowerOf10(right, 0, out left, out right))
                     tensResult += "-" + singleDigitNames[(int)left];
