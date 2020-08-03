@@ -40,7 +40,7 @@ namespace CurrencyConversion.Service
             { 2, "twenty" },
             { 3, "thirty" },
             { 4, "forty" },
-            { 5, "fifthy" },
+            { 5, "fifty" },
             { 6, "sixty" },
             { 7, "seventy" },
             { 8, "eighty" },
