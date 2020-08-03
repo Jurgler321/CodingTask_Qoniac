@@ -5,15 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CurrencyConversion_Client"
         mc:Ignorable="d"
-        Title="CurrencyConversion" Height="200" Width="650">
+        Title="CurrencyConversion" Height="220" Width="650" ResizeMode="NoResize">
     <Window.Resources>
         <local:TrueToVisibleConverter x:Key="TrueToVisibleConverter"/>
         <local:TrueToCollapsedConverter x:Key="TrueToCollapsedConverter"/>
     </Window.Resources>
+    <!--Connected to a service-->
     <Grid>
         <StackPanel Visibility="{Binding IsConnectedToService, Converter={StaticResource TrueToVisibleConverter}}" Orientation="Vertical">
+            <TextBlock  Margin="10,5,0,-5" FontSize="15" Text="Enter the number you want to convert"/>
             <Grid>
-                <Button Command="{Binding ConvertCommand}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="280" Height="40" Margin="352,10,0,0">
+                <Button Command="{Binding ConvertCommand}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="275" Height="40" Margin="352,10,0,0">
                     <Button.Content>
                         <TextBlock Text="Convert" FontSize="15"/>
                     </Button.Content>
@@ -21,10 +23,14 @@
                 <TextBox Text="{Binding CurrentUserInput, Mode=OneWayToSource}" VerticalContentAlignment="Center" FontSize="15" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="337" Height="40"/>
 
             </Grid>
-            <TextBlock HorizontalAlignment="Center" Margin="0,5,0,0" FontSize="18" TextWrapping="Wrap" Foreground="Black" Text="{Binding CurrentServiceResult, Mode=OneWay}" />
+
             <Grid Background="LightGray" Height="1" Margin="10"/>
+            <TextBlock HorizontalAlignment="Left" Margin="15,0,0,0" FontSize="15" TextWrapping="Wrap" Foreground="Black" Text="Result:" />
+            <TextBlock HorizontalAlignment="Left" Margin="15,5,0,0" FontSize="18" TextWrapping="Wrap" Foreground="Black" Text="{Binding CurrentServiceResult, Mode=OneWay}" />
         </StackPanel>
-        <Grid Visibility="{Binding IsConnectedToService, Converter={StaticResource TrueToCollapsedConverter}}">
+
+        <!--Not connected to a service-->
+            <Grid Visibility="{Binding IsConnectedToService, Converter={StaticResource TrueToCollapsedConverter}}">
             <StackPanel Orientation="Vertical" Margin="0,20,0,0">
                 <TextBlock HorizontalAlignment="Center" FontSize="17" Text="You're not connected to the currency conversion service" FontWeight="Bold" Foreground="Red"/>
                 <Button Command="{Binding StartNewServiceCommand}" Margin="0,10,0,0" HorizontalAlignment="Center" VerticalAlignment="Center">
