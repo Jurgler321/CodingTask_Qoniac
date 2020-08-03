@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CurrencyConversion_Client.ServiceReference {
+namespace CurrencyConversion.Client.ServiceReference {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -23,12 +23,12 @@ namespace CurrencyConversion_Client.ServiceReference {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface ICurrencyConversionServiceChannel : CurrencyConversion_Client.ServiceReference.ICurrencyConversionService, System.ServiceModel.IClientChannel {
+    public interface ICurrencyConversionServiceChannel : CurrencyConversion.Client.ServiceReference.ICurrencyConversionService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class CurrencyConversionServiceClient : System.ServiceModel.ClientBase<CurrencyConversion_Client.ServiceReference.ICurrencyConversionService>, CurrencyConversion_Client.ServiceReference.ICurrencyConversionService {
+    public partial class CurrencyConversionServiceClient : System.ServiceModel.ClientBase<CurrencyConversion.Client.ServiceReference.ICurrencyConversionService>, CurrencyConversion.Client.ServiceReference.ICurrencyConversionService {
         
         public CurrencyConversionServiceClient() {
         }

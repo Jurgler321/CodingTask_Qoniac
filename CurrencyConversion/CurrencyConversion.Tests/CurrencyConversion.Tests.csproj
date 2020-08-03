@@ -61,10 +61,6 @@
       <Project>{cdcc8db5-6779-4e3e-a2f5-b19a019c5563}</Project>
       <Name>CurrencyConversion.Service</Name>
     </ProjectReference>
-    <ProjectReference Include="..\CurrencyConversion_Client\CurrencyConversion.Client.csproj">
-      <Project>{58d3d2b4-22d0-43bc-8519-9faa80f4278d}</Project>
-      <Name>CurrencyConversion.Client</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

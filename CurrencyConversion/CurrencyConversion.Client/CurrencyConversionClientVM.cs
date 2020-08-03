@@ -1,4 +1,4 @@
-﻿using CurrencyConversion_Client.ServiceReference;
+﻿using CurrencyConversion.Client.ServiceReference;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,7 +13,7 @@ using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media.Animation;
 
-namespace CurrencyConversion_Client
+namespace CurrencyConversion.Client
 {
     public class CurrencyConversionClientVM : INotifyPropertyChanged, IDisposable
     {

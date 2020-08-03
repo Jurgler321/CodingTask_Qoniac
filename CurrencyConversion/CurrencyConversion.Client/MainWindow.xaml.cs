@@ -1,8 +1,8 @@
-﻿using CurrencyConversion_Client.ServiceReference;
+﻿using CurrencyConversion.Client.ServiceReference;
 using System;
 using System.Windows;
 
-namespace CurrencyConversion_Client
+namespace CurrencyConversion.Client
 {
     /// <summary>
     /// Interaktionslogik für MainWindow.xaml

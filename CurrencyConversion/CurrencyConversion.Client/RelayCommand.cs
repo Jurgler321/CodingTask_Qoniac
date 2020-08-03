@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace CurrencyConversion_Client
+namespace CurrencyConversion.Client
 {
     public class RelayCommand : ICommand
     {

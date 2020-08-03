@@ -26,7 +26,7 @@ namespace CurrencyConversion.Service
 
                 SelfHost.Open();
                 Console.WriteLine("The service is ready.");
-                Console.WriteLine("Press <ENTER> to terminate service.");
+                Console.WriteLine("Press any key to terminate service.");
                 Console.WriteLine();
                 Console.ReadLine();
 
@@ -36,7 +36,7 @@ namespace CurrencyConversion.Service
             catch (CommunicationException ce)
             {
                 Console.WriteLine("An exception occured: {0}", ce.Message);
-                Console.WriteLine("Press <ENTER> to terminate service.");
+                Console.WriteLine("Press any key to terminate service.");
                 Console.WriteLine();
                 Console.ReadLine();
                 SelfHost.Abort();
